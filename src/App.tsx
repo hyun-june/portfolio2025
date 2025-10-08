@@ -1,12 +1,12 @@
-import Profile from "./components/Profile/Profile";
+import Main from "./components/Main";
+import Project from "./components/Project";
 import "./App.css";
 
 function App() {
   return (
-    <div className="main_container">
-      <div className="inner_dashed">
-        <Profile />
-      </div>
+    <div className="h-screen text-[var(--text-green)]">
+      <Main />
+      <Project />
     </div>
   );
 }

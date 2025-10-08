@@ -1,19 +1,12 @@
+@import "tailwindcss";
+
 body {
   padding: 0;
   margin: 0;
 }
 
-.main_container {
-  background-color: black;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 1em;
-}
-
-.inner_dashed {
-  border: 1px dashed white;
-  height: 100%;
-  border-radius: 10px;
-  padding: 1em;
-  box-sizing: border-box;
+:root {
+  --text-green: #11785f;
+  --text-gray: #6c757d;
+  --bg-red: #f94148;
 }
