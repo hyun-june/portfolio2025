@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import Profile from "./Profile";
+import { IoIosMail } from "react-icons/io";
+import { FaCalendar } from "react-icons/fa";
+import { IoPersonSharp } from "react-icons/io5";
 
 const Home = () => {
   const texts = ["Developer", "Newcomer", "Thinker"];
@@ -14,11 +16,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 ">
+    <div className="grid border-r-2 border-gray-200">
       <section>
-        <h1 className="text-8xl">PORTFOLIO</h1>
-        <div className="text-3xl flex relative mt-20">
-          <p className="border-b-3 pb-2">Creative</p>
+        <h1 className="text-7xl">ABOUT ME</h1>
+        <div className="text-3xl flex relative mt-5 flex-col gap-3">
+          {/* <p className="border-b-3 pb-2">Creative</p>
           {texts.map((text, i) => (
             <p
               key={i}
@@ -30,12 +32,20 @@ const Home = () => {
             >
               {text}
             </p>
-          ))}
-        </div>
-      </section>
-      <section className="grid h-full self-center justify-self-center">
-        <div className="relative flex justify-center self-center before:content-[''] before:absolute before:w-[1px] before:h-full before:bg-stone-400 before:left-0 ">
-          <Profile src="캐릭터.png" />
+          ))} */}
+
+          <p className="flex gap-1 items-center">
+            <IoPersonSharp className="text-2xl text-black" />
+            이현준 <span className="text-xl self-end">LEE HYUNJUN</span>
+          </p>
+
+          <p className="flex gap-1 items-center">
+            <FaCalendar className="text-2xl text-black" /> <span>98.12.18</span>
+          </p>
+          <p className="flex gap-1 items-center">
+            <IoIosMail className="text-2xl text-black" />
+            <span>leehyunjune11@naver.com</span>
+          </p>
         </div>
       </section>
     </div>

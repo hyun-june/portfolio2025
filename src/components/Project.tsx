@@ -10,19 +10,23 @@ const Project = () => {
     : projectList;
 
   return (
-    <div>
-      <h1 className="text-8xl ">PROJECT</h1>
-      <label htmlFor="important_project" className="text-xl  font-sub">
+    <div className="flex flex-col justify-center items-center py-10">
+      <h1 className="text-7xl">PROJECT</h1>
+
+      <label
+        htmlFor="important_project"
+        className="text-xl relative font-sub mr-2 flex gap-1 mt-10 items-center w-max cursor-pointer"
+      >
         중요 프로젝트 보기
+        <input
+          type="checkbox"
+          id="important_project"
+          checked={checkFilter}
+          onClick={() => setCheckFilter((prev) => !prev)}
+        />
       </label>
-      <input
-        type="checkbox"
-        id="important_project"
-        className="mt-10"
-        checked={checkFilter}
-        onClick={() => setCheckFilter((prev) => !prev)}
-      />
-      <section className="my-10 flex gap-10">
+
+      <section className=" grid grid-cols-2 gap-20 py-10 w-full">
         {filterList.map((item, i) => (
           <ProjectForm item={item} key={i} />
         ))}

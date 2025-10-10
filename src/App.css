@@ -28,8 +28,9 @@
   --text-green: #11785f;
   --text-gray: #6c757d;
   --bg-red: #f94148;
+  --bg-main: #fffbf0;
 
-  --font-main: "SchoolSafetyCertificate";
+  --font-main: "GabiaSai";
   --font-sub: "Pretendard";
 }
 
@@ -37,4 +38,5 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-main);
+  background-color: var(--bg-main);
 }
