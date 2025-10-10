@@ -23,7 +23,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
   const [isIframeLoading, setIsIframeLoading] = useState(true);
 
   return (
-    <div className=" w-[350px] h-[400px] border shadow-sm p-2 rounded-md flex flex-col  font-sub">
+    <div className="border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white">
       <div className="border-b-1 border-gray-400">
         <h4
           className={`${
@@ -37,7 +37,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
           <span> ({team === true ? "팀 프로젝트" : "개인 프로젝트"})</span>
         </p>
       </div>
-      <div className="flex flex-col flex-1 justify-between py-3">
+      <div className="flex flex-col flex-1 justify-between py-3 gap-4">
         <h5 className="text-md">{subTitle}</h5>
         <ul className="list-disc pl-4">
           {role?.map((list, i) => (
@@ -90,7 +90,11 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
                 onLoad={() => setIsIframeLoading(false)}
               />
 
-              {isIframeLoading && <div>로딩중...</div>}
+              {isIframeLoading && (
+                <div className="flex justify-center items-center">
+                  로딩중...
+                </div>
+              )}
             </div>
           </div>
         )}
