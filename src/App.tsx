@@ -7,7 +7,9 @@ import Profile from "./components/Profile";
 function App() {
   return (
     <div className=" text-[var(--text-green)] px-[4em] flex flex-col">
-      <nav className="border-b-2 border-gray-200 text-4xl mt-2">PORTFOLIO</nav>
+      <nav className="border-b-2 border-gray-200 text-4xl mt-2 font-title">
+        PORTFOLIO
+      </nav>
       <div className="flex my-10">
         <section className="grid h-full w-full self-center justify-self-center">
           <div className="flex  w-full">

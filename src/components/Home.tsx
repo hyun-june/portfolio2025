@@ -18,8 +18,8 @@ const Home = () => {
   return (
     <div className="grid border-r-2 border-gray-200">
       <section>
-        <h1 className="text-7xl">ABOUT ME</h1>
-        <div className="text-3xl flex relative mt-5 flex-col gap-3">
+        <h1 className="text-6xl">ABOUT ME</h1>
+        <div className="text-2xl flex relative mt-5 flex-col gap-3 font-sub text-[var(--text-gray)]">
           {/* <p className="border-b-3 pb-2">Creative</p>
           {texts.map((text, i) => (
             <p

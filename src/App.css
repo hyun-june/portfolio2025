@@ -30,8 +30,9 @@
   --bg-red: #f94148;
   --bg-main: #fffbf0;
 
-  --font-main: "GabiaSai";
+  --font-main: "SchoolSafetyCertificate";
   --font-sub: "Pretendard";
+  --font-title: "GabiaSai";
 }
 
 body {
