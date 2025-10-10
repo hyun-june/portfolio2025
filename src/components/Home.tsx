@@ -7,7 +7,7 @@ const Home = () => {
     <div className="grid border-r-2 border-gray-200">
       <section>
         <h1 className="text-6xl">ABOUT ME</h1>
-        <div className="text-2xl flex relative mt-5 flex-col gap-3 font-sub text-[var(--text-gray)]">
+        <div className="text-2xl flex mt-5 flex-col gap-3 font-sub text-[var(--text-gray)]">
           <p className="flex gap-1 items-center">
             <IoPersonSharp className="text-2xl text-black" />
             이현준 <span className="text-xl self-end">LEE HYUNJUN</span>
