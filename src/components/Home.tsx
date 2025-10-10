@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Profile from "./Profile";
 
-const Main = () => {
+const Home = () => {
   const texts = ["Developer", "Newcomer", "Thinker"];
   const [index, setIndex] = useState(0);
 
@@ -32,12 +32,6 @@ const Main = () => {
             </p>
           ))}
         </div>
-        {/* <p className="mt-30">
-          코드를 작성하고 그 결과물이 즉시 눈에 보이는 것에서 큰 흥미를
-          느꼈습니다. <br />
-          이를 통해 프론트엔드 개발자로서 더 많은 것을 배우고 성장해 나가고
-          싶습니다.
-        </p> */}
       </section>
       <section className="grid h-full self-center justify-self-center">
         <div className="relative flex justify-center self-center before:content-[''] before:absolute before:w-[1px] before:h-full before:bg-stone-400 before:left-0 ">
@@ -48,4 +42,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
