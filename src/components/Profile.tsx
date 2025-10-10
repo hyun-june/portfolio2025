@@ -6,7 +6,7 @@ interface ProfileProps {
   [key: string]: any;
 }
 
-const Profile = ({ src, ...props }: ProfileProps) => {
+const Profile = ({ src }: ProfileProps) => {
   return (
     <div className="w-[400px] h-[700px] p-2  shadow-[0px_0px_5px_1px_gray] rounded-[50px] ml-30 flex flex-col  font-sub">
       <img
