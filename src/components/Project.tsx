@@ -1,9 +1,11 @@
 import { useState } from "react";
 import ProjectForm from "./ProjectForm";
 import { projectList } from "../constants/projectList.js";
+import ReactPlayer from "react-player";
 
 const Project = () => {
   const [checkFilter, setCheckFilter] = useState(true);
+  const [play, setPlay] = useState(false);
 
   const filterList = checkFilter
     ? projectList.filter((item) => item.important)
@@ -11,7 +13,20 @@ const Project = () => {
 
   return (
     <div className="flex flex-col justify-center items-center py-10">
-      <h1 className="text-6xl">PROJECT</h1>
+      <div
+        onMouseEnter={() => setPlay(true)}
+        onMouseLeave={() => setPlay(false)}
+      >
+        <ReactPlayer
+          src="healthylife2024.mp4"
+          muted={true}
+          playing={play}
+          loop={true}
+          controls={false}
+        />
+      </div>
+
+      {/* <h1 className="text-6xl">PROJECT</h1>
 
       <label
         htmlFor="important_project"
@@ -30,7 +45,7 @@ const Project = () => {
         {filterList.map((item, i) => (
           <ProjectForm item={item} key={i} />
         ))}
-      </section>
+      </section> */}
     </div>
   );
 };
