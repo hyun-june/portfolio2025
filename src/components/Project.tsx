@@ -11,7 +11,7 @@ const Project = () => {
 
   return (
     <div className="flex flex-col justify-center items-center my-10">
-      <h1 className="text-6xl">PROJECT</h1>
+      <h1 className="text-5xl">PROJECT</h1>
 
       <label
         htmlFor="important_project"
