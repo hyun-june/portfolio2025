@@ -7,13 +7,11 @@ interface ProfileProps {
   src?: string;
   birth?: string;
   email?: string;
-  git?: string;
-  velog?: string;
   [key: string]: any;
 }
 
 const Profile = ({ profile }: ProfileProps) => {
-  const { name, src, birth, email, git, velog } = profile;
+  const { name, src, birth, email } = profile;
 
   return (
     <div className="w-[300px] h-[500px] p-2 bg-white  shadow-[0px_0px_5px_1px_gray] rounded-[50px] flex flex-col  font-sub mr-20">
@@ -35,15 +33,6 @@ const Profile = ({ profile }: ProfileProps) => {
           <IoIosMail className="text-black" />
           <span className="text-base">{email}</span>
         </p>
-
-        <div className="mt-5 flex gap-4">
-          <a href={git} target="_black">
-            Git
-          </a>
-          <a href={velog} target="_black">
-            Velog
-          </a>
-        </div>
       </div>
     </div>
   );

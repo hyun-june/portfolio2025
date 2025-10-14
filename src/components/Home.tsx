@@ -1,9 +1,11 @@
-import { profileList } from "../constants/ProfileList";
+import { profileList } from "../constants/profileList";
 import { FaGithub } from "react-icons/fa";
 import { SiVelog } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
+// import { RiNotionFill } from "react-icons/ri";
 
 const Home = () => {
-  const { git, velog } = profileList;
+  const { git, velog, figma } = profileList;
   return (
     <div className="grid border-r-2 border-gray-200">
       <section className="flex flex-col justify-between">
@@ -16,13 +18,17 @@ const Home = () => {
 
           <div className="mt-5 flex gap-4 text-3xl">
             <a href={git} target="_black">
-              {/* Git */}
               <FaGithub />
             </a>
             <a href={velog} target="_black">
-              {/* Velog */}
               <SiVelog />
             </a>
+            <a href={figma} target="_black">
+              <FaFigma />
+            </a>
+            {/* <a href={figma} target="_black">
+              <RiNotionFill />
+            </a> */}
           </div>
         </div>
       </section>

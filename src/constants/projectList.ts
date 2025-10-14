@@ -26,6 +26,7 @@ export const projectList = [
     date: "2024.11 ~ 2025.09",
     team: true,
     important: true,
+    img: ["캐릭터.png", "증명사진.jpg"],
   },
   {
     title: "HealthyLife2024",

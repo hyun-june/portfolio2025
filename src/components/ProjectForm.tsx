@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import ProjectModal from "./ProjectModal";
 
 interface ProjectFormProps {
   item: {
@@ -14,15 +15,27 @@ interface ProjectFormProps {
     date?: string;
     team?: boolean;
     role?: string[];
+    img?: string[];
   };
 }
 
 const ProjectForm = ({ item }: ProjectFormProps) => {
-  const { title, subTitle, skills, important, notion, date, team, role, site } =
-    item;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isIframeLoading, setIsIframeLoading] = useState(true);
-  const [play, setPlay] = useState(false);
+  const {
+    title,
+    subTitle,
+    skills,
+    important,
+    notion,
+    date,
+    team,
+    role,
+    site,
+    img,
+  } = item;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isIframeLoading, setIsIframeLoading] = useState<boolean>(true);
+  const [play, setPlay] = useState<boolean>(false);
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   return (
     <div className="border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white">
@@ -87,6 +100,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
               </a>
             ) : null}
           </div>
+          <button onClick={() => setModalIsOpen(true)}>Modal</button>
 
           {isOpen && (
             <div
@@ -116,6 +130,10 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
             </div>
           )}
         </div>
+        {/* <ProjectModal setModalIsOpen={setModalIsOpen} img={img} /> */}
+        {modalIsOpen && (
+          <ProjectModal setModalIsOpen={setModalIsOpen} img={img} />
+        )}
       </div>
     </div>
   );
