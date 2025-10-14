@@ -3,11 +3,18 @@ import { FaCalendar } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
 
 interface ProfileProps {
+  name?: string;
   src?: string;
+  birth?: string;
+  email?: string;
+  git?: string;
+  velog?: string;
   [key: string]: any;
 }
 
-const Profile = ({ src }: ProfileProps) => {
+const Profile = ({ profile }: ProfileProps) => {
+  const { name, src, birth, email, git, velog } = profile;
+
   return (
     <div className="w-[300px] h-[500px] p-2 bg-white  shadow-[0px_0px_5px_1px_gray] rounded-[50px] flex flex-col  font-sub mr-20">
       <img
@@ -17,23 +24,23 @@ const Profile = ({ src }: ProfileProps) => {
       <div className="mt-5 p-4 flex-1 flex flex-col justify-between text-xl ">
         <p className="flex gap-1 items-center">
           <IoPersonSharp className="text-black" />
-          이현준 <span className="text-lg self-end">LEE HYUNJUN</span>
+          <span>{name}</span>
         </p>
 
         <p className="flex gap-1 items-center">
           <FaCalendar className=" text-black" />{" "}
-          <span className="text-base">98.12.18</span>
+          <span className="text-base">{birth}</span>
         </p>
         <p className="flex gap-1 items-center">
           <IoIosMail className="text-black" />
-          <span className="text-base">leehyunjune11@naver.com</span>
+          <span className="text-base">{email}</span>
         </p>
 
         <div className="mt-5 flex gap-4">
-          <a href="https://github.com/hyun-june" target="_black">
+          <a href={git} target="_black">
             Git
           </a>
-          <a href="https://velog.io/@hyun_jun/posts" target="_black">
+          <a href={velog} target="_black">
             Velog
           </a>
         </div>
