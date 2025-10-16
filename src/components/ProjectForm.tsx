@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import ProjectModal from "./ProjectModal";
+import { CgReadme } from "react-icons/cg";
+import { BsCardImage } from "react-icons/bs";
 
 interface ProjectFormProps {
   item: {
@@ -8,7 +10,6 @@ interface ProjectFormProps {
     subTitle?: string;
     skills?: string[];
     git?: string;
-    site?: string;
     figma?: string;
     notion?: string;
     important?: boolean;
@@ -29,8 +30,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
     date,
     team,
     role,
-    site,
-    img,
+    img = [],
   } = item;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isIframeLoading, setIsIframeLoading] = useState<boolean>(true);
@@ -39,20 +39,6 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
 
   return (
     <div className="border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white">
-      {/* <div
-        onMouseEnter={() => setPlay(true)}
-        onMouseLeave={() => setPlay(false)}
-        className="w-full bg-amber-100"
-      >
-        <ReactPlayer
-          src="healthylife2024.mp4"
-          muted={true}
-          playing={play}
-          loop={true}
-          controls={false}
-          width="100%"
-        />
-      </div> */}
       <div>
         <div className="border-b-1 border-gray-400">
           <h4
@@ -84,23 +70,19 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
           <div className="flex gap-3">
             {notion ? (
               <button
-                className="border border-gray-400 rounded-md py-0.5 px-2 w-max cursor-pointer"
+                className="border border-gray-400 rounded-md py-0.5 px-2 w-max cursor-pointer flex items-center gap-1"
                 onClick={() => setIsOpen(true)}
               >
+                <CgReadme className="text-lg" />
                 README
               </button>
             ) : null}
-            {site ? (
-              <a
-                target="_blank"
-                href={site}
-                className="border border-gray-400 rounded-md py-0.5 px-2 w-max cursor-pointer"
-              >
-                이동하기
-              </a>
-            ) : null}
+            {img.length > 0 && (
+              <button onClick={() => setModalIsOpen(true)}>
+                <BsCardImage /> 이미지
+              </button>
+            )}
           </div>
-          <button onClick={() => setModalIsOpen(true)}>Modal</button>
 
           {isOpen && (
             <div
@@ -130,7 +112,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
             </div>
           )}
         </div>
-        {/* <ProjectModal setModalIsOpen={setModalIsOpen} img={img} /> */}
+
         {modalIsOpen && (
           <ProjectModal setModalIsOpen={setModalIsOpen} img={img} />
         )}

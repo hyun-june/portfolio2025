@@ -12,8 +12,11 @@ const Home = () => {
         <h1 className="text-5xl">ABOUT ME</h1>
 
         <div className="h-full flex flex-col justify-between py-3">
-          <p className="text-xl mt-3 flex">
-            안녕하세요. 여기다가는 어떤 말들을 적을지 고민중이에요.
+          <p className="text-lg mt-3 flex font-sub">
+            안녕하세요. <br />
+            배움을 나누며 함께 성장하는 것을 좋아합니다.
+            <br />팀 프로젝트에 참여하며 서로의 지식을 공유하고, <br />
+            함께 성장하는 과정을 소중히 생각합니다.
           </p>
 
           <div className="mt-5 flex gap-4 text-3xl">

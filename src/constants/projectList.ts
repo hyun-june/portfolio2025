@@ -1,3 +1,16 @@
+const imagesMap = {
+  healthyList: import.meta.glob("/src/assets/test/*.{png,jpg,jpeg}", {
+    eager: true,
+  }),
+};
+
+const readImg = (folder: keyof typeof imagesMap): string[] => {
+  const img = imagesMap[folder];
+  if (!img) return [];
+  const imgList = Object.values(img).map((mod: any) => mod.default);
+  return imgList;
+};
+
 export const projectList = [
   {
     title: "SELLECT",
@@ -18,7 +31,6 @@ export const projectList = [
       "역할을 명확히 구분하여 백엔드 개발자와의 협업 경험",
     ],
     git: "https://github.com/hyun-june/sellect-me",
-    site: "https://sellect.best/",
     figma:
       "https://www.figma.com/design/f7bTK7dr7UU3Azw6TqEn3R/HealthyLife?t=MsnbD71k0iPJcXgz-0",
     notion:
@@ -26,7 +38,7 @@ export const projectList = [
     date: "2024.11 ~ 2025.09",
     team: true,
     important: true,
-    img: ["캐릭터.png", "증명사진.jpg"],
+    img: readImg("healthyList"),
   },
   {
     title: "HealthyLife2024",
@@ -47,7 +59,6 @@ export const projectList = [
       "피드 페이지 개발",
     ],
     git: "https://github.com/hyun-june/Nodejs-TeamProject2-3",
-    site: "https://healthylife-2024.netlify.app/",
     figma:
       "https://www.figma.com/design/f7bTK7dr7UU3Azw6TqEn3R/HealthyLife?t=MsnbD71k0iPJcXgz-0",
     notion:
@@ -86,7 +97,6 @@ export const projectList = [
     ],
     role: ["youtube data api v3 이용해서 플레이 리스트 페이지 개발"],
     git: "https://github.com/hyun-june/react-study-teamProject-Radion",
-    site: "https://react-teamproject-radion.netlify.app/",
     figma:
       "https://www.figma.com/design/1XkwexEXjYZP0XyOWO04Dm/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%8A%A4%ED%84%B0%EB%94%94-2%EA%B8%B0-6%EC%A1%B0?node-id=0-1&t=z0g2EL66gqLERHKi-0",
     notion: "https://hyun-june.github.io/react-study-teamProject-Radion/",
