@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 interface ProjectModalProps {
   setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -17,33 +19,33 @@ const ProjectModal = ({ setModalIsOpen, img }: ProjectModalProps) => {
       onClick={() => setModalIsOpen(false)}
     >
       <div
-        className="fixed z-[999] w-[420px] h-[550px] bg-white shadow-lg rounded-md p-3 flex flex-col items-center gap-3 p-2"
+        className="fixed z-[999] bg-white shadow-lg rounded-md p-3 flex flex-col items-center gap-3 p-2"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="border w-full h-full">
+        <div className="border border-black w-full h-full flex justify-center items-center">
           {img && (
             <img
               src={img[tabIndex - 1]}
               alt=""
-              className="w-[400px] h-[450px] object-contain"
+              className="max-w-[1700px] h-[800px] object-contain mx-auto"
             />
           )}
         </div>
-        <div>
+        <div className="flex gap-1 text-black  items-center text-2xl">
           <button
             onClick={() => setTabIndex((prev) => (prev > 1 ? prev - 1 : prev))}
             className="cursor-pointer"
           >
-            {"<"}
+            <IoIosArrowBack />
           </button>
-          <span>{`${tabIndex}/${img?.length}`}</span>
+          <span className="text-lg mb-1">{`${tabIndex} / ${img?.length}`}</span>
           <button
             onClick={() =>
               setTabIndex((prev) => (prev < img.length ? prev + 1 : prev))
             }
             className="cursor-pointer"
           >
-            {">"}
+            <IoIosArrowForward />
           </button>
         </div>
       </div>

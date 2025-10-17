@@ -38,7 +38,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white">
+    <div className="border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white text-black">
       <div>
         <div className="border-b-1 border-gray-400">
           <h4
@@ -55,12 +55,12 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
         </div>
         <div className="flex flex-col flex-1 justify-between py-3 gap-4">
           <h5 className="text-md">{subTitle}</h5>
-          <ul className="list-disc pl-4">
+          <ul className="list-disc pl-4 text-[var(--text-black-sub)]">
             {role?.map((list, i) => (
               <li key={i}>{list}</li>
             ))}
           </ul>
-          <div className="border border-[#f9c51d] bg-[#f9c51d33] rounded-md p-1 flex gap-3 flex-wrap">
+          <div className="border border-[#f9c51d] bg-[#f9c51d33] rounded-md p-1 flex gap-3 flex-wrap ">
             {skills?.map((skill, i) => (
               <span key={i} className=" text-nowrap">
                 {skill}
@@ -78,7 +78,10 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
               </button>
             ) : null}
             {img.length > 0 && (
-              <button onClick={() => setModalIsOpen(true)}>
+              <button
+                className="border border-gray-400 rounded-md py-0.5 px-2 w-max cursor-pointer flex items-center gap-1"
+                onClick={() => setModalIsOpen(true)}
+              >
                 <BsCardImage /> 이미지
               </button>
             )}

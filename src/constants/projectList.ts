@@ -1,5 +1,17 @@
 const imagesMap = {
-  healthyList: import.meta.glob("/src/assets/test/*.{png,jpg,jpeg}", {
+  HealthyLife2024: import.meta.glob(
+    "/src/assets/healthy2024/*.{png,jpg,jpeg}",
+    {
+      eager: true,
+    }
+  ),
+  SELLECT: import.meta.glob("/src/assets/sellect/*.{png,jpg,jpeg}", {
+    eager: true,
+  }),
+  GeoWeather: import.meta.glob("/src/assets/GeoWeather/*.{png,jpg,jpeg}", {
+    eager: true,
+  }),
+  Radion: import.meta.glob("/src/assets/Radion/*.{png,jpg,jpeg}", {
     eager: true,
   }),
 };
@@ -7,7 +19,9 @@ const imagesMap = {
 const readImg = (folder: keyof typeof imagesMap): string[] => {
   const img = imagesMap[folder];
   if (!img) return [];
-  const imgList = Object.values(img).map((mod: any) => mod.default);
+  const imgList = Object.values(img)
+    .map((mod: any) => mod.default)
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
   return imgList;
 };
 
@@ -38,7 +52,7 @@ export const projectList = [
     date: "2024.11 ~ 2025.09",
     team: true,
     important: true,
-    img: readImg("healthyList"),
+    img: readImg("SELLECT"),
   },
   {
     title: "HealthyLife2024",
@@ -66,6 +80,7 @@ export const projectList = [
     date: "2024.11",
     team: true,
     important: true,
+    img: readImg("HealthyLife2024"),
   },
   {
     title: "지오웨더(GeoWeather)",
@@ -83,6 +98,7 @@ export const projectList = [
     date: "2024.07",
     team: true,
     important: false,
+    img: readImg("GeoWeather"),
   },
   {
     title: "Radion",
@@ -103,5 +119,6 @@ export const projectList = [
     date: "2024.09",
     team: true,
     important: false,
+    img: readImg("Radion"),
   },
 ];
