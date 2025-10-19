@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { SiVelog } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
-import { profileList } from "./../constants/profileList";
+import { profileList } from "./../constants/profileList.ts";
 // import { RiNotionFill } from "react-icons/ri";
 
 const Home = () => {

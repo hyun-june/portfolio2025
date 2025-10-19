@@ -3,7 +3,7 @@ import Project from "./components/Project";
 import Skills from "./components/Skills";
 import "./App.css";
 import Profile from "./components/Profile";
-import { profileList } from "./constants/profileList";
+import { profileList } from "./constants/profileList.ts";
 
 function App() {
   return (
