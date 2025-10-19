@@ -1,9 +1,9 @@
 import Home from "./components/Home";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
-import "./App.css";
 import Profile from "./components/Profile";
 import { profileList } from "./constants/profileList";
+import "./App.css";
 
 function App() {
   return (
