@@ -14,6 +14,18 @@ const imagesMap = {
   Radion: import.meta.glob("/src/assets/Radion/*.{png,jpg,jpeg}", {
     eager: true,
   }),
+  weatherapp: import.meta.glob("/src/assets/weatherapp/*.{png,jpg,jpeg}", {
+    eager: true,
+  }),
+  todoapp: import.meta.glob("/src/assets/todoapp/*.{png,jpg,jpeg}", {
+    eager: true,
+  }),
+  ShootingGame: import.meta.glob(
+    "/src/assets/ShootingGame/*.{png,jpg,jpeg,gif}",
+    {
+      eager: true,
+    }
+  ),
 };
 
 const readImg = (folder: keyof typeof imagesMap): string[] => {
@@ -120,5 +132,38 @@ export const projectList = [
     team: true,
     important: false,
     img: readImg("Radion"),
+  },
+  {
+    title: "weather App",
+    subTitle: "React Native 클론 코딩 - weather app",
+    skills: ["React Native", "Expo", "Expo App"],
+    role: ["현재 위치의 날씨를 알 수 있는 앱"],
+    git: "https://github.com/hyun-june/react-native_weather",
+    date: "2025.09",
+    team: false,
+    important: false,
+    img: readImg("weatherapp"),
+  },
+  {
+    title: "todo App",
+    subTitle: "React Native 클론 코딩 - todo app",
+    skills: ["React Native", "Expo", "Expo App"],
+    role: ["두 가지 카테고리로 분류하여 내 일정을 기록 할 수 있는 앱"],
+    git: "https://github.com/hyun-june/react-native_todo",
+    date: "2025.09",
+    team: false,
+    important: false,
+    img: readImg("todoapp"),
+  },
+  {
+    title: "Shooting Game",
+    subTitle: "자바스크립트 캔버스를 이용한 슈팅 게임입니다.",
+    skills: ["javascript", "canvas"],
+    role: ["캔버스를 활용해서 만든 간단한 웹 슈팅 게임"],
+    git: "https://github.com/hyun-june/javascript-shootingGame",
+    date: "2024.09",
+    team: false,
+    important: false,
+    img: readImg("ShootingGame"),
   },
 ];
