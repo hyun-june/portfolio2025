@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectForm from "./ProjectForm";
-import { projectList } from "../constants/projectList.js";
+import { projectList } from "../constants/projectList";
 
 const Project = () => {
   const [checkFilter, setCheckFilter] = useState(true);
