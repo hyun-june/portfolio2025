@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ReactPlayer from "react-player";
 import ProjectModal from "./ProjectModal";
 import { CgReadme } from "react-icons/cg";
 import { BsCardImage } from "react-icons/bs";
@@ -34,7 +33,6 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
   } = item;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isIframeLoading, setIsIframeLoading] = useState<boolean>(true);
-  const [play, setPlay] = useState<boolean>(false);
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   return (
