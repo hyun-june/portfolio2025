@@ -5,7 +5,7 @@ export const skillList = {
     { label: "React-native", color: "#087ea4" },
     { label: "Tailwind CSS", color: "#38bdf8" },
     { label: "Next.js", color: "#000" },
-    { labe: "MUI", color: "#0180ff" },
+    { label: "MUI", color: "#0180ff" },
   ],
   backend: [
     { label: "Node.js", color: "#417e38" },
