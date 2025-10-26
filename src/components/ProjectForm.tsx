@@ -16,6 +16,7 @@ interface ProjectFormProps {
     team?: boolean;
     role?: string[];
     img?: string[];
+    velog?: string;
   };
 }
 
@@ -29,8 +30,10 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
     date,
     team,
     role,
+    velog,
     img = [],
   } = item;
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isIframeLoading, setIsIframeLoading] = useState<boolean>(true);
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
@@ -83,6 +86,16 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
                 <BsCardImage /> 이미지
               </button>
             )}
+            {velog ? (
+              <a
+                href={velog}
+                className="border border-gray-400 rounded-md py-0.5 px-2 w-max cursor-pointer flex items-center gap-1"
+                target="_black"
+              >
+                <CgReadme className="text-lg" />
+                Velog
+              </a>
+            ) : null}
           </div>
 
           {isOpen && (

@@ -95,6 +95,23 @@ export const projectList = [
     img: readImg("HealthyLife2024"),
   },
   {
+    title: "LostArk(미정)",
+    subTitle:
+      "로스트아크 캐릭터 검색 및 다양한 기능을 제공하는 React Native 앱을 개발 중",
+    skills: ["React Native", "React Query", "Expo"],
+    role: [
+      "캐릭터 검색 및 정보 획득",
+      "내가 원하는 정보를 저장해서  손쉽게 폰으로 확인 할 수 있는 사이트 개발 목표",
+    ],
+    git: "https://github.com/hyun-june/sellect-me",
+    figma: "https://github.com/hyun-june/react-native-LostArk",
+    velog:
+      "https://velog.io/@hyun_jun/LostArk-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80",
+    date: "2025.10 ~ 개발 중",
+    team: false,
+    important: true,
+  },
+  {
     title: "지오웨더(GeoWeather)",
     subTitle: "실시간 날씨와 현재 위치 기반 서비스",
     skills: ["Javascript", "KakaoMap API", "OpenWeather API", "Web Speech API"],
