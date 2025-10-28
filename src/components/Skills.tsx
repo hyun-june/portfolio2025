@@ -12,24 +12,27 @@ const skillIcons: Record<string, React.ReactElement> = {
 };
 const Skills = () => {
   return (
-    <div className="pl-10">
-      <h1 className="text-5xl">SKILLS</h1>
-      <div className="border p-5 my-6 rounded-lg w-max flex flex-col gap-5 font-sub bg-white">
+    <div className="p-0 my-3 flex flex-col justify-center items-center xl:pl-10 xl:items-start">
+      <h1 className="text-5xl w-max">SKILLS</h1>
+      <div className="border p-3 my-6 rounded-lg flex flex-col gap-5 font-sub bg-white">
         {Object.entries(skillList).map(([category, skills]) => (
-          <div className="flex gap-1">
-            <div className="flex items-center gap-2 text-black mr-5 w-25">
+          <div className="flex xl:flex gap-1">
+            <div className="flex items-center gap-2 text-black xl:w-25 mr-2">
               <span className=" text-2xl">{skillIcons[category]}</span>
               <span className="text-lg">{category}</span>
             </div>
-            {skills.map((item, i) => (
-              <span
-                className="mr-1 text-white rounded-md px-2"
-                style={{ backgroundColor: item.color }}
-                key={i}
-              >
-                {item.label}
-              </span>
-            ))}
+
+            <div className="flex flex-wrap gap-1">
+              {skills.map((item, i) => (
+                <div
+                  className="mr-1 text-white rounded-md px-2 text-sm flex items-center"
+                  style={{ backgroundColor: item.color }}
+                  key={i}
+                >
+                  {item.label}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

@@ -26,7 +26,7 @@ const Project = () => {
         />
       </label>
 
-      <section className=" grid grid-cols-2 gap-20 py-10 w-full">
+      <section className="flex flex-col items-center xl:grid grid-cols-2 gap-20 py-10 w-full">
         {filterList.map((item, i) => (
           <ProjectForm item={item} key={i} />
         ))}

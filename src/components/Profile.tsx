@@ -40,7 +40,7 @@ const Profile = ({ profile }: ProfileProps) => {
   );
 
   return (
-    <div className="w-[300px] h-[500px] p-2 bg-white  shadow-[0px_0px_5px_1px_gray] rounded-[50px] flex flex-col  font-sub mr-20">
+    <div className="w-[300px] h-[500px]  p-2 bg-white  shadow-[0px_0px_5px_1px_gray] rounded-[50px] flex flex-col font-sub xl:mr-20">
       <img
         className="w-full aspect-square rounded-[50px] border border-gray-500"
         src={src}

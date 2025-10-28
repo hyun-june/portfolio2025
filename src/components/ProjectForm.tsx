@@ -39,7 +39,7 @@ const ProjectForm = ({ item }: ProjectFormProps) => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white text-black">
+    <div className="w-full border shadow-sm p-5 rounded-md flex flex-col font-sub bg-white text-black">
       <div>
         <div className="border-b-1 border-gray-400">
           <h4

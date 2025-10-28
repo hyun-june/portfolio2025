@@ -4,12 +4,22 @@ import { FaFigma } from "react-icons/fa";
 import { profileList } from "./../constants/profileList";
 // import { RiNotionFill } from "react-icons/ri";
 
-const Home = () => {
+interface HomeProps {
+  type?: string;
+}
+
+const Home = ({ type }: HomeProps) => {
   const { git, velog, figma } = profileList;
   return (
-    <div className="grid border-r-2 border-gray-200">
-      <section className="flex flex-col justify-between">
-        <h1 className="text-5xl">ABOUT ME</h1>
+    <div
+      className={`flex-1 xl:grid border-gray-200 ${
+        type === "tablet"
+          ? "border-0 border-r-0 flex"
+          : "border-b-2 xl:border-b-0 xl:border-r-2"
+      }`}
+    >
+      <section className="flex flex-col justify-between items-center my-2 xl:items-start">
+        <h1 className="text-5xl w-max">ABOUT ME</h1>
 
         <div className="h-full flex flex-col justify-between py-3">
           <p className="text-lg mt-3 flex font-sub">
